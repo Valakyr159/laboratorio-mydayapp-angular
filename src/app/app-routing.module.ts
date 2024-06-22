@@ -18,12 +18,11 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/all',
-    pathMatch: 'full'
+    component: HomeComponent,
   },
   {
     path: '**',
-    redirectTo: '/all',
+    redirectTo: '',
   },
 ];
 
