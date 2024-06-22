@@ -5,10 +5,26 @@ import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'all',
     component: HomeComponent,
+  },
+  {
+    path: 'pending',
+    component: HomeComponent,
+  },
+  {
+    path: 'completed',
+    component: HomeComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/all',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: '**',
+    redirectTo: '/all',
+  },
 ];
 
 @NgModule({
